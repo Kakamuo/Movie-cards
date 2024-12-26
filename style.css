@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --body-bg: #e8f0f2; /* Background color of the body */
+  --text-color: #333; /* Primary text color */
+  --card-color: #fff; /* Background color for cards */
+  --card-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for cards */
+  --img-border: 2px solid #ddd; /* Border for images */
+  --title-color: #555; /* Title color for movie names */
+  --description-color: #666; /* Text color for descriptions */
+  --link-color: #007BFF; /* Color for Read More link */
+  --link-hover-color: #0056b3; /* Hover color for Read More link */
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-color);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--card-box-shadow);
+  transition: all 0.4s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-bottom: var(--img-border);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.movie-title {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.movie-description {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  max-height: 45px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.movie-description.expanded {
+  max-height: 1000px;
+}
+
+.card.expanded {
+  transform: scale(1.05);
+}
+
+.read-more {
+  color: var(--link-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.read-more:hover {
+  color: var(--link-hover-color);
+}
+
